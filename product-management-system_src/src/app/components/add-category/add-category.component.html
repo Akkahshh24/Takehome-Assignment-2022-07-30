@@ -1,0 +1,32 @@
+<div class="container col-md-6" style="margin-top:30px">
+    <h3>Category Details</h3>
+    <hr>
+    <form #categoryForm="ngForm" novalidate class="form" (ngSubmit)="addCategory()">
+        <div class="row">
+            <div class="col-sm-3">
+                <label class="col-form-label">Category ID</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="number" min="0" class="form-control" id="categoryId" name="categoryId" [(ngModel)]="category.categoryId"/>
+            </div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3">
+                <label class="col-form-label">Category Name</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="categoryName" name="categoryName" [(ngModel)]="category.categoryName"/>
+            </div>
+        </div>
+        &nbsp;
+        <div class="row justify-content-center">
+            <div class="col-sm-2">
+                <input type="submit" value="Submit" name="submit" class="btn btn-primary">
+            </div>
+            <div class="col-sm-2">
+                <input type="reset" value="Reset" name="reset" class="btn btn-secondary">
+            </div>
+        </div>
+    </form>
+</div>
